@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - AyurVeda Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Team Hero Section Style */
+        .team-hero {
+            position: relative;
+            background: linear-gradient(135deg, #1a2e14 0%, #2d4a1f 100%);
+            color: var(--cream);
+            padding: 140px 20px 100px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .team-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 50% 10%, rgba(74,124,44,0.3), transparent 50%);
+            pointer-events: none;
+        }
+
+        .team-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(212,175,55,0.5);
+            margin-bottom: 20px;
+        }
+
+        /* Team Content Section Style */
+        .team-section {
+            padding: 80px 20px;
+            background-color: var(--secondary-dark);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .team-member {
+            background: linear-gradient(135deg, var(--card-dark) 0%, var(--secondary-dark) 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(212,175,55,0.2);
+        }
+
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            background-color: var(--primary-green); /* Placeholder color */
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: var(--primary-dark);
+            border: 4px solid var(--gold);
+        }
+
+        .member-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        .member-title {
+            color: var(--primary-green);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .member-bio {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">ॐ</span>
+                <span class="logo-text">AyurVeda</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/marketplace">Marketplace</a></li>
+                <li><a href="/ayurvedic-bot">Ayurvedic Bot</a></li>
+                <li>
+                    <a href="/cart">
+                        Cart 
+                        {% if session.cart %}
+                            ({{ session.cart|length }})
+                        {% else %}
+                            (0)
+                        {% endif %}
+                    </a>
+                </li>
+                <li><a href="/about-team" class="active">About Team</a></li>
+                <li><a href="/library">Library</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="team-hero">
+        <div class="container">
+            <h1 class="team-title">The Guardians of AyurVeda</h1>
+            <p class="market-subtitle">
+                Meet the dedicated individuals who bring ancient wisdom and modern technology together for your well-being.
+            </p>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Our Visionaries</h2>
+            <div class="team-grid">
+                
+                <div class="team-member">
+                    <div class="member-photo"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3 class="member-name">Akshyata</h3>
+                    <p class="member-title">Team leader</p>
+                    <p class="member-bio">
+                        
+                    </p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo"><i class="fas fa-brain"></i></div>
+                    <h3 class="member-name">yashasvi</h3>
+                    <p class="member-title"></p>
+                    <p class="member-bio">
+                        
+                    </p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-photo"><i class="fas fa-seedling"></i></div>
+                    <h3 class="member-name">Sutapa</h3>
+                    <p class="member-title"></p>
+                    <p class="member-bio">
+                        
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Start Your Journey to Balance</h2>
+            <p class="cta-text">Connect with our AI Vaidya for personalized insights right now</p>
+            <button class="cta-button-secondary" onclick="window.location.href='/ayurvedic-bot'">
+                Chat with the Bot
+            </button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AyurVeda Platform</h4>
+                    <p>Connecting ancient wisdom with modern wellness</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/marketplace">Marketplace</a></li>
+                        <li><a href="/ayurvedic-bot">Ayurvedic Bot</a></li>
+                        <li><a href="/library">Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>info@ayurveda-platform.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AyurVeda Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
