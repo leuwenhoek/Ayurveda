@@ -1,0 +1,863 @@
+[
+  {
+    "medicine_name": "Ashwagandha Churna",
+    "use": "Stress relief, vitality, energy, and muscle strength.",
+    "herbs": "Withania somnifera (Ashwagandha)",
+    "price": "₹250",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Triphala Churna",
+    "use": "Digestive cleanser, mild laxative, and eye tonic.",
+    "herbs": "Amalaki, Haritaki, Vibhitaki",
+    "price": "₹180",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Chyavanprash Avaleha",
+    "use": "Immunity booster, respiratory health, and general tonic.",
+    "herbs": "Amalaki (main), and 40+ other herbs (e.g., Dashamula, Pippali)",
+    "price": "₹380",
+    "delivery_notes": "2-4 business days"
+  },
+  {
+    "medicine_name": "Brahmi Vati",
+    "use": "Memory enhancement, concentration, and nerve tonic.",
+    "herbs": "Brahmi (Bacopa monnieri), Vacha, Shankhpushpi",
+    "price": "₹290",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Liv.52 Tablets",
+    "use": "Liver protection, detoxification, and appetite stimulant. (Proprietary Medicine)",
+    "herbs": "Kasani, Mandura Bhasma, Kakamachi",
+    "price": "₹150",
+    "delivery_notes": "2-3 business days"
+  },
+  {
+    "medicine_name": "Arjunarishta",
+    "use": "Cardiac tonic, supports heart health and circulation.",
+    "herbs": "Arjuna (Terminalia arjuna), Draksha, Madhuka",
+    "price": "₹220",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Shatavari Ghrita",
+    "use": "Female reproductive health, hormonal balance, and nourishing tonic.",
+    "herbs": "Shatavari (Asparagus racemosus), Ghee (clarified butter)",
+    "price": "₹450",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Shilajit Capsules",
+    "use": "Vigor, stamina, anti-aging (Rasayana), and mineral supplementation.",
+    "herbs": "Shilajit (Asphaltum), Ashwagandha (often added)",
+    "price": "₹350",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Gokshura Churna",
+    "use": "Urinary tract health, kidney function, and male health support.",
+    "herbs": "Tribulus terrestris (Gokshura)",
+    "price": "₹195",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Tulsi Swaras (Juice)",
+    "use": "Respiratory health, anti-allergic, and immunity.",
+    "herbs": "Ocimum sanctum (Tulsi)",
+    "price": "₹140",
+    "delivery_notes": "2-4 business days"
+  },
+  {
+    "medicine_name": "Mahayogaraja Guggulu",
+    "use": "Joint pain, arthritis, stiffness, and Vata disorders.",
+    "herbs": "Shuddha Guggulu, Triphala, Loha Bhasma, and 20+ other herbs.",
+    "price": "₹320",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Abhayarishta",
+    "use": "Constipation, hemorrhoids (Arsha), and digestive health.",
+    "herbs": "Haritaki (main), Draksha, Vidanga, Madhuka",
+    "price": "₹160",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Draksharishta",
+    "use": "Anemia (Pandu), general weakness, and appetite improvement.",
+    "herbs": "Draksha (Raisins), Pippali, Twak",
+    "price": "₹190",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Khadirarishta",
+    "use": "Skin diseases, blood purification, and allergic conditions.",
+    "herbs": "Khadira (Acacia catechu), Triphala, Daruharidra",
+    "price": "₹175",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Kumaryasava",
+    "use": "Liver and spleen disorders, digestive issues, and menstrual health.",
+    "herbs": "Kumari (Aloe Vera), Loha Bhasma, Trikatu",
+    "price": "₹210",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Sarivadyasava",
+    "use": "Blood purifier, skin disorders, and urinary tract infections.",
+    "herbs": "Sariva (Indian Sarsaparilla), Guduchi, Amalaki",
+    "price": "₹230",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Punarnavarishta",
+    "use": "Diuretic, useful in edema, liver issues, and urinary tract health.",
+    "herbs": "Punarnava, Dashamula, Trikatu",
+    "price": "₹185",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Amla (Indian Gooseberry) Juice",
+    "use": "Rich source of Vitamin C, immune support, and antioxidant.",
+    "herbs": "Amalaki (Emblica officinalis)",
+    "price": "₹280",
+    "delivery_notes": "2-4 business days"
+  },
+  {
+    "medicine_name": "Neelibhringadi Tailam",
+    "use": "Hair growth, prevents hair fall, and treats premature graying.",
+    "herbs": "Neeli (Indigo), Bhringaraja, Amla, Coconut Oil base",
+    "price": "₹310",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Mahanarayana Tailam",
+    "use": "External application for joint pain, muscle stiffness, and paralysis.",
+    "herbs": "Bilva, Ashwagandha, Bala, Sesame oil base",
+    "price": "₹420",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Jatyadi Ghrita",
+    "use": "Healing wounds, burns, and ulcers (external application).",
+    "herbs": "Jati (Jasmine), Patola, Neem, Ghee base",
+    "price": "₹240",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Godanti Bhasma",
+    "use": "Chronic fever, headache, and calcium supplement.",
+    "herbs": "Purified Gypsum (mineral)",
+    "price": "₹110",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Swarna Bhasma",
+    "use": "Immunomodulator, cardiac tonic, and neurological disorders (high-end Rasayana).",
+    "herbs": "Purified Gold (metal)",
+    "price": "₹3500",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Loha Bhasma",
+    "use": "Iron deficiency anemia (Pandu), liver and spleen disorders.",
+    "herbs": "Purified Iron (metal)",
+    "price": "₹160",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Chandanasava",
+    "use": "Urinary tract infections (UTI), burning micturition, and cooling effect.",
+    "herbs": "Shveta Chandana (Sandalwood), Priyangu, Yashtimadhu",
+    "price": "₹170",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Lodhrasava",
+    "use": "Female health, leucorrhea, and bleeding disorders.",
+    "herbs": "Lodhra (Symplocos racemosa), Mocharasa, Dhataki",
+    "price": "₹155",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Kutaja Ghan Vati",
+    "use": "Diarrhea, dysentery, and irritable bowel syndrome (IBS).",
+    "herbs": "Kutaja (Holarrhena antidysenterica)",
+    "price": "₹120",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Vajradanti Toothpaste",
+    "use": "Dental hygiene, prevents gum bleeding, and strengthens teeth.",
+    "herbs": "Vajradanti, Lavanga (Clove), Babul",
+    "price": "₹90",
+    "delivery_notes": "2-3 business days"
+  },
+  {
+    "medicine_name": "Trikatu Churna",
+    "use": "Digestive aid, improves metabolism (Agni), and respiratory support.",
+    "herbs": "Shunti (Ginger), Maricha (Black Pepper), Pippali (Long Pepper)",
+    "price": "₹110",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Hingwashtak Churna",
+    "use": "Gas (flatulence), bloating, and indigestion.",
+    "herbs": "Hingu (Asafoetida), Trikatu, Saindhava Lavana",
+    "price": "₹95",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Saraswatarishta",
+    "use": "Memory, intellect (medhya), stress, and nervous system disorders.",
+    "herbs": "Brahmi, Shatavari, Vidari, Ashwagandha",
+    "price": "₹280",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Chandrakala Rasa",
+    "use": "Bleeding disorders, excessive heat, and burning sensation (Pitta disorders).",
+    "herbs": "Shuddha Parada, Abhraka Bhasma, Guduchi",
+    "price": "₹480",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Dashamula Kwath",
+    "use": "Anti-inflammatory, pain relief, and post-fever general debility.",
+    "herbs": "Ten roots (Dashamula) including Bilva, Agnimantha, Gambhari",
+    "price": "₹130",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Vasarishta",
+    "use": "Cough, asthma, and other respiratory disorders.",
+    "herbs": "Vasa (Adhatoda vasica), Twak, Ela",
+    "price": "₹170",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Gandhak Rasayana",
+    "use": "Skin diseases (chronic), blood purification, and antibacterial.",
+    "herbs": "Shuddha Gandhaka (Sulphur), Trikatu, Triphala",
+    "price": "₹190",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Arogyavardhini Vati",
+    "use": "Chronic liver disorders, skin diseases, and digestive health.",
+    "herbs": "Katuki, Shuddha Parada, Loha Bhasma, Guggulu",
+    "price": "₹260",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Swasari Kwath",
+    "use": "Cough, cold, and breathing difficulties (asthma).",
+    "herbs": "Mulethi, Vasa, Kantkari",
+    "price": "₹95",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Pippali Churna",
+    "use": "Respiratory diseases, digestive fire (Agni) stimulant, and detoxification.",
+    "herbs": "Piper longum (Pippali)",
+    "price": "₹130",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Haridra Khand",
+    "use": "Allergies, chronic skin conditions (itching, urticaria), and blood purifier.",
+    "herbs": "Haridra (Turmeric), Trikatu, Ghee",
+    "price": "₹280",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Agastya Haritaki Rasayana",
+    "use": "Chronic cough, asthma, and respiratory strengthening.",
+    "herbs": "Haritaki, Dashamula, Bala, Ghee",
+    "price": "₹340",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Bala Tailam",
+    "use": "Nervous system disorders, paralysis, and general body strength (external/internal).",
+    "herbs": "Bala (Sida cordifolia), Dashamula, Tila Taila (Sesame oil base)",
+    "price": "₹390",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Brahmi Amla Hair Oil",
+    "use": "Prevents hair loss, promotes hair growth, and cools the scalp.",
+    "herbs": "Brahmi, Amalaki, Sesame/Coconut Oil base",
+    "price": "₹165",
+    "delivery_notes": "2-4 business days"
+  },
+  {
+    "medicine_name": "Shankhpushpi Syrup",
+    "use": "Improves memory, mental fatigue, and insomnia.",
+    "herbs": "Shankhpushpi (Convolvulus pluricaulis), Brahmi, Vacha",
+    "price": "₹190",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Yashtimadhu Churna",
+    "use": "Cough, sore throat, and gastric irritation (ulcers).",
+    "herbs": "Glycyrrhiza glabra (Yashtimadhu/Licorice)",
+    "price": "₹145",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Vata Vidhwansan Rasa",
+    "use": "Vata disorders, joint pain, muscle spasms, and nervous disorders.",
+    "herbs": "Shuddha Parada, Gandhaka, Tamra Bhasma, Vatsanabha",
+    "price": "₹550",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Karpurasava",
+    "use": "Severe diarrhea and cholera (emergency formula).",
+    "herbs": "Karpoor (Camphor), Jatiphal, Lavanga",
+    "price": "₹290",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Dadimadi Ghrita",
+    "use": "Indigestion, heart burn, and beneficial during pregnancy (for nausea).",
+    "herbs": "Dadima (Pomegranate), Dhanyaka, Ghee",
+    "price": "₹380",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Eladi Vati",
+    "use": "Cough, cold, hoarseness of voice, and throat irritation.",
+    "herbs": "Ela (Cardamom), Pippali, Madhuka",
+    "price": "₹110",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Septilin Syrup",
+    "use": "Immunity support, respiratory tract infections, and general anti-infective. (Proprietary Medicine)",
+    "herbs": "Guduchi, Yashtimadhu, Guggulu",
+    "price": "₹150",
+    "delivery_notes": "2-4 business days"
+  },
+  {
+    "medicine_name": "Guduchi Satva",
+    "use": "Fever, high Pitta conditions, and chronic metabolic disorders.",
+    "herbs": "Guduchi (Tinospora cordifolia extract)",
+    "price": "₹210",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Talisadi Churna",
+    "use": "Cough, asthma, cold, and digestive problems.",
+    "herbs": "Talispatra, Trikatu, Vamshalochana, Ela",
+    "price": "₹190",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Punarnava Mandur",
+    "use": "Anemia, edema, and liver/kidney disorders.",
+    "herbs": "Punarnava, Mandura Bhasma (Iron oxide), Trikatu",
+    "price": "₹230",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Narayana Tailam (External)",
+    "use": "Body massage for relief from Vata disorders, stiffness, and arthritis.",
+    "herbs": "Shatavari, Bala, Bilva, Sesame oil base",
+    "price": "₹290",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Jatamansi Churna",
+    "use": "Nervous tonic, insomnia, and mental calm.",
+    "herbs": "Nardostachys jatamansi (Jatamansi)",
+    "price": "₹310",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Kaishore Guggulu",
+    "use": "Gout (Vatarakta), skin diseases, and purifies blood.",
+    "herbs": "Triphala, Trikatu, Guggulu, Guduchi",
+    "price": "₹240",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Chandraprabha Vati",
+    "use": "Urinary tract disorders, diabetes, and general strength.",
+    "herbs": "Shilajit, Guggulu, Vacha, Musta, 30+ ingredients",
+    "price": "₹170",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Musli Pak",
+    "use": "Vigor, strength, and male reproductive health.",
+    "herbs": "Safed Musli, Ashwagandha, Shatavari, Ghee",
+    "price": "₹490",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Lasunadi Vati",
+    "use": "Severe indigestion, diarrhea, and abdominal pain.",
+    "herbs": "Lasuna (Garlic), Shunti, Saindhava Lavana",
+    "price": "₹90",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Mustakarishta",
+    "use": "Digestive disorders, weak digestion, and Grahani Roga (IBS).",
+    "herbs": "Musta (Cyperus rotundus), Methi, Shunthi",
+    "price": "₹160",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Kutki Churna",
+    "use": "Liver tonic, anti-pyretic (fever), and detoxifier.",
+    "herbs": "Picrorhiza kurroa (Kutki)",
+    "price": "₹260",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Kumkumadi Tailam",
+    "use": "Brightens skin, reduces blemishes and scars (external).",
+    "herbs": "Kesar (Saffron), Sandalwood, Manjistha, Oil base",
+    "price": "₹750",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Haritaki Churna",
+    "use": "Mild laxative, digestive, and rejuvenating.",
+    "herbs": "Terminalia chebula (Haritaki)",
+    "price": "₹120",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Amritarishta",
+    "use": "Chronic and recurrent fever, and immunity.",
+    "herbs": "Guduchi (Amrita), Dashamula, Pippali",
+    "price": "₹190",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Swarnamukhi Face Cream",
+    "use": "Skin glow and anti-aging (proprietary formulation).",
+    "herbs": "Turmeric, Sandalwood, Kumkumadi ingredients",
+    "price": "₹390",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Vacha Churna",
+    "use": "Speech disorders, nerve tonic, and digestive stimulant.",
+    "herbs": "Acorus calamus (Vacha/Sweet Flag)",
+    "price": "₹180",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Ajamamsa Rasayana",
+    "use": "Neuromuscular disorders, wasting, and respiratory conditions.",
+    "herbs": "Goat meat (Aja Mamsa), Bala, Ghee, Jaggery",
+    "price": "₹650",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Kshirabala Tailam 101 Avarti",
+    "use": "Vata disorders, nerve pain, and arthritis.",
+    "herbs": "Bala (Sida cordifolia), Milk (Kshira), Sesame oil",
+    "price": "₹850",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Kamdudha Rasa (Moti Yukt)",
+    "use": "Hyperacidity (Amlapitta), bleeding disorders, and burning sensation.",
+    "herbs": "Mukta Pishti (Pearl), Guduchi Satva, Pravala Bhasma",
+    "price": "₹720",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Sitopaladi Churna (Demo 55)",
+    "use": "Cough and respiratory support.",
+    "herbs": "Sitopala, Vamshalochana, Pippali",
+    "price": "₹195",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Ashokarishta",
+    "use": "Uterine and female reproductive health, and menorrhagia.",
+    "herbs": "Ashoka (Saraca asoca), Dashamula, Musta",
+    "price": "₹210",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Haridra Churna (Demo 57)",
+    "use": "Anti-inflammatory, antiseptic, and immune booster.",
+    "herbs": "Curcuma longa (Turmeric)",
+    "price": "₹110",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Guggulu Tikta Ghrita",
+    "use": "Chronic skin diseases, arthritis, and fistula.",
+    "herbs": "Guggulu, Neem, Patola, Ghee",
+    "price": "₹480",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Vidangasava",
+    "use": "Worm infestation (Krimi Roga) and digestive issues.",
+    "herbs": "Vidanga, Pippali, Rasna",
+    "price": "₹170",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Avipattikar Churna",
+    "use": "Hyperacidity, constipation, and indigestion.",
+    "herbs": "Trikatu, Triphala, Nishoth, Ela",
+    "price": "₹150",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Maha Manjisthadi Kwath",
+    "use": "Blood purification and various chronic skin diseases.",
+    "herbs": "Manjistha, Haridra, Guduchi, 30+ other herbs",
+    "price": "₹230",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Arjuna Churna",
+    "use": "Heart tonic, wound healing, and fracture healing.",
+    "herbs": "Terminalia arjuna bark powder",
+    "price": "₹140",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Lodhra Churna",
+    "use": "Female reproductive health and wound healing.",
+    "herbs": "Symplocos racemosa (Lodhra)",
+    "price": "₹160",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Dhatri Lauha",
+    "use": "Hair loss, premature graying, and anemia.",
+    "herbs": "Amalaki, Loha Bhasma",
+    "price": "₹290",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Brihat Manjisthadi Kwath",
+    "use": "Chronic skin disorders, gout, and rheumatism.",
+    "herbs": "Manjistha, Musta, Kuth, Triphala",
+    "price": "₹240",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Ashmarihar Kwath",
+    "use": "Urinary calculi (kidney stones) and painful micturition.",
+    "herbs": "Pashanbheda, Gokshura, Punarnava",
+    "price": "₹110",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Lavangadi Vati",
+    "use": "Cough, cold, and sore throat.",
+    "herbs": "Lavanga (Clove), Pippali, Akarkara",
+    "price": "₹95",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Balaswagandhadi Tailam",
+    "use": "Nerve and muscle strength, and rheumatic conditions (external).",
+    "herbs": "Bala, Ashwagandha, Godugdha (Cow's Milk)",
+    "price": "₹370",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Gandhak Vati",
+    "use": "Chronic fever, cough, and digestive issues.",
+    "herbs": "Shuddha Gandhaka (Sulphur), Pippali, Shunti",
+    "price": "₹180",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Isabgol Husk",
+    "use": "Chronic constipation and controlling diarrhea.",
+    "herbs": "Plantago ovata (Psyllium Husk)",
+    "price": "₹160",
+    "delivery_notes": "2-4 business days"
+  },
+  {
+    "medicine_name": "Rasnadi Churna (External)",
+    "use": "Application for headache and sinusitis.",
+    "herbs": "Rasna, Devadaru, Ginger",
+    "price": "₹80",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Godhum Churna",
+    "use": "Source of energy and nutrition (Wheat powder, a basic raw material).",
+    "herbs": "Triticum aestivum (Wheat)",
+    "price": "₹70",
+    "delivery_notes": "2-4 business days"
+  },
+  {
+    "medicine_name": "Agnitundi Vati",
+    "use": "Weak digestion, loss of appetite, and Vata-Kapha digestive disorders.",
+    "herbs": "Shuddha Parada, Shuddha Gandhaka, Aconite (Shuddha Vatsanabha)",
+    "price": "₹270",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Dadhimantha Ghrita",
+    "use": "Gastric problems, pain, and digestive weakness.",
+    "herbs": "Curd/Yogurt, Ghee, Pippali",
+    "price": "₹340",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Amalaki Rasayana",
+    "use": "Rejuvenation, anti-aging, and eye health.",
+    "herbs": "Amalaki (Indian Gooseberry)",
+    "price": "₹290",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Bhimseni Karpoor",
+    "use": "External application for pain, cold rub, and aromatherapy.",
+    "herbs": "Cinnamomum camphora (Natural Camphor)",
+    "price": "₹120",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Himalaya Gasex Tablet",
+    "use": "Relieves gas, indigestion, and bloating. (Proprietary Medicine)",
+    "herbs": "Cowrie, Shilajit, Triphala",
+    "price": "₹185",
+    "delivery_notes": "2-3 business days"
+  },
+  {
+    "medicine_name": "Nagaradi Kwath",
+    "use": "General detoxifier and fever.",
+    "herbs": "Nagara (Ginger), Musta, Guduchi",
+    "price": "₹115",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Kankasava",
+    "use": "Bronchial asthma and chronic cough.",
+    "herbs": "Dhattura, Vatsaka, Vasaka",
+    "price": "₹230",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Vanga Bhasma",
+    "use": "Urinary disorders and general debility.",
+    "herbs": "Purified Tin (metal)",
+    "price": "₹280",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Pravala Pishti",
+    "use": "Calcium supplement, hyperacidity, and burning sensation.",
+    "herbs": "Coral (marine source)",
+    "price": "₹160",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Talisadi Modaka",
+    "use": "Cough, cold, and respiratory tract infection.",
+    "herbs": "Talispatra, Trikatu, Vamshalochana",
+    "price": "₹210",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Gandusha Tailam",
+    "use": "Oil pulling (oral health), strength of gums and teeth.",
+    "herbs": "Sesame Oil, Neem, Triphala",
+    "price": "₹150",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Sarpa Gandha Vati",
+    "use": "High blood pressure and insomnia.",
+    "herbs": "Sarpagandha (Rauwolfia serpentina)",
+    "price": "₹260",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Guduchi Churna (Demo 76)",
+    "use": "Immunity, fever, and metabolic disorders.",
+    "herbs": "Tinospora cordifolia (Giloy/Guduchi)",
+    "price": "₹130",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Trivanga Bhasma",
+    "use": "Male and female reproductive tonic.",
+    "herbs": "Purified Lead, Tin, Zinc (metals)",
+    "price": "₹380",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Vidari Kand Churna",
+    "use": "Weight gain, strength, and male health.",
+    "herbs": "Pueraria tuberosa (Vidari Kand)",
+    "price": "₹220",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Manjistha Churna",
+    "use": "Blood purifier, skin detox, and complexion.",
+    "herbs": "Rubia cordifolia (Manjistha)",
+    "price": "₹170",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Sukumara Ghrita",
+    "use": "Hernia, abdominal pain, and female health.",
+    "herbs": "Punarnava, Dashamula, Ghee",
+    "price": "₹420",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Sudarshan Churna",
+    "use": "Fever (all types), cold, and headache.",
+    "herbs": "Sudarshana, Pippali, Haridra, 30+ ingredients",
+    "price": "₹190",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Krimikuthar Rasa",
+    "use": "Worm infestation (intestinal parasites).",
+    "herbs": "Vidanga, Shuddha Parada, Musta",
+    "price": "₹310",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Triphala Ghrita",
+    "use": "Eye health (Netra Tarpanam), and gentle laxative.",
+    "herbs": "Triphala, Ghee",
+    "price": "₹360",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Anu Tailam",
+    "use": "Nasal drops (Nasya) for sinusitis, headache, and neck stiffness.",
+    "herbs": "Jivanti, Shatavari, Bilva, Sesame oil base",
+    "price": "₹250",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Mustakadi Kwath",
+    "use": "Fever with diarrhea and digestive weakness.",
+    "herbs": "Musta, Parpata, Kutaja",
+    "price": "₹105",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Brihat Vata Chintamani Rasa",
+    "use": "Severe Vata disorders, paralysis, and neurological conditions.",
+    "herbs": "Swarna Bhasma, Rajata Bhasma, Hira Bhasma (Diamond)",
+    "price": "₹1200",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Aragwadha Mahatiktaka Ghrita",
+    "use": "Skin diseases, detox, and chronic ulcers.",
+    "herbs": "Aragwadha, Neem, Vasa, Ghee",
+    "price": "₹450",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Draksha Avaleha",
+    "use": "Anemia, fatigue, and general debility.",
+    "herbs": "Draksha (Raisins), Pippali, Jaggery",
+    "price": "₹310",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Amla Capsules (Demo 88)",
+    "use": "Vitamin C source, antioxidant, and hair health.",
+    "herbs": "Amalaki extract",
+    "price": "₹190",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Kabasura Kudineer (South Indian Formula)",
+    "use": "Fever, cold, and respiratory tract infections.",
+    "herbs": "Ginger, Pippali, Haritaki, Vasa",
+    "price": "₹120",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Amritadi Guggulu",
+    "use": "Gout, carbuncles, and inflammation.",
+    "herbs": "Guduchi, Triphala, Guggulu",
+    "price": "₹260",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Panchatikta Ghrita Guggulu",
+    "use": "Skin diseases, arthritis, and fistula.",
+    "herbs": "Panchatikta (5 bitter herbs), Ghee, Guggulu",
+    "price": "₹390",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Mahabhringraj Oil",
+    "use": "Hair fall, premature graying, and sound sleep.",
+    "herbs": "Bhringaraja, Manjistha, Amla, Sesame oil base",
+    "price": "₹210",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Madhu (Honey)",
+    "use": "Vehicle (Anupana) for medicines, cough, and wound healing.",
+    "herbs": "Natural product (Honey)",
+    "price": "₹250",
+    "delivery_notes": "2-3 business days"
+  },
+  {
+    "medicine_name": "Aragwadha Churna",
+    "use": "Mild laxative and skin disorders.",
+    "herbs": "Cassia fistula (Aragwadha)",
+    "price": "₹150",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Hingwashtak Churna (Demo 96)",
+    "use": "Gas, bloating, and indigestion.",
+    "herbs": "Asafoetida, Trikatu, Rock Salt",
+    "price": "₹105",
+    "delivery_notes": "3-5 business days"
+  },
+  {
+    "medicine_name": "Bilvadi Churna",
+    "use": "Diarrhea and irritable bowel syndrome.",
+    "herbs": "Bilva (Aegle marmelos), Musta, Ginger",
+    "price": "₹170",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Vaidyaratnam Oushadha Kanji Choorna (Demo 98)",
+    "use": "Nutritional porridge mix for post-fever recovery.",
+    "herbs": "Rice, Fenugreek, Pippali, other spices",
+    "price": "₹150",
+    "delivery_notes": "4-6 business days"
+  },
+  {
+    "medicine_name": "Swarna Vanga",
+    "use": "Urinary disorders and general tonic.",
+    "herbs": "Purified Tin and herbal extracts",
+    "price": "₹340",
+    "delivery_notes": "5-7 business days"
+  },
+  {
+    "medicine_name": "Ayush Kwath Churna (Govt. Formula)",
+    "use": "Immunity booster and prophylactic for respiratory health.",
+    "herbs": "Tulsi, Dalchini, Sunthi, Krishna Maricha",
+    "price": "₹90",
+    "delivery_notes": "3-5 business days"
+  }
+]
