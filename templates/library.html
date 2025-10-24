@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Library - Knowledge & Wisdom | AyurVeda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Library Hero Section Style */
+        .library-hero {
+            position: relative;
+            background: linear-gradient(135deg, #1a2e14 0%, #2d4a1f 100%);
+            color: var(--cream);
+            padding: 140px 20px 100px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .library-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 80% 90%, rgba(212,175,55,0.15), transparent 50%);
+            pointer-events: none;
+        }
+
+        .library-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(212,175,55,0.5);
+            margin-bottom: 20px;
+        }
+
+        /* Content Section Style */
+        .library-section {
+            padding: 80px 20px;
+            background-color: var(--secondary-dark);
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .article-card {
+            background: linear-gradient(135deg, var(--card-dark) 0%, var(--secondary-dark) 100%);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--primary-green);
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(74,124,44,0.3);
+        }
+
+        .article-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .article-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--cream);
+            margin-bottom: 10px;
+        }
+
+        .article-summary {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--primary-green);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">ॐ</span>
+                <span class="logo-text">AyurVeda</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/marketplace">Marketplace</a></li>
+                <li><a href="/ayurvedic-bot">Ayurvedic Bot</a></li>
+                <li>
+                    <a href="/cart">
+                        Cart 
+                        {% if session.cart %}
+                            ({{ session.cart|length }})
+                        {% else %}
+                            (0)
+                        {% endif %}
+                    </a>
+                </li>
+                <li><a href="/about-team">About Team</a></li>
+                <li><a href="/library" class="active">Library</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="library-hero">
+        <div class="container">
+            <h1 class="library-title">The Repository of Vedic Knowledge</h1>
+            <p class="market-subtitle">
+                Explore the foundational principles of Ayurveda, from Doshas to Dinacharya, and deepen your understanding of holistic living.
+            </p>
+        </div>
+    </section>
+
+    <section class="library-section">
+        <div class="container">
+            <h2 class="section-title">Foundational Concepts</h2>
+            <div class="article-grid">
+                
+                <div class="article-card">
+                    <div class="article-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="article-title">Understanding the Three Doshas</h3>
+                    <p class="article-summary">
+                        Learn about Vata, Pitta, and Kapha—the fundamental energies that govern every biological function, and how they define your unique constitution.
+                    </p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-icon"><i class="fas fa-sun"></i></div>
+                    <h3 class="article-title">Dinacharya: Daily Routines</h3>
+                    <p class="article-summary">
+                        Discover the power of aligning your body with the natural rhythms of the sun through mindful morning and evening practices for optimal health.
+                    </p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-icon"><i class="fas fa-utensils"></i></div>
+                    <h3 class="article-title">The Six Tastes (Rasas)</h3>
+                    <p class="article-summary">
+                        Explore how sweet, sour, salty, pungent, bitter, and astringent tastes impact your Doshas and how to use food as medicine in your diet.
+                    </p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-icon"><i class="fas fa-leaf"></i></div>
+                    <h3 class="article-title">Key Ayurvedic Herbs</h3>
+                    <p class="article-summary">
+                        A beginner's guide to powerful herbs like Ashwagandha, Turmeric, and Triphala, detailing their traditional uses and modern benefits.
+                    </p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Need Personalized Guidance?</h2>
+            <p class="cta-text">Our Ayurvedic Bot can analyze your concerns and point you to relevant resources.</p>
+            <button class="cta-button-secondary" onclick="window.location.href='/ayurvedic-bot'">
+                Consult the Bot
+            </button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AyurVeda Platform</h4>
+                    <p>Connecting ancient wisdom with modern wellness</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/marketplace">Marketplace</a></li>
+                        <li><a href="/ayurvedic-bot">Ayurvedic Bot</a></li>
+                        <li><a href="/library">Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>info@ayurveda-platform.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AyurVeda Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
