@@ -55,26 +55,35 @@
     </section>
 
     <div class="container cart-container">
-        <div class="cart-items">
-    {% if cart %}
-        <div class="cart-items">
-            {% for item in cart %} 
-            <div class="cart-item">
-                <div>
-                    <div class="item-name">{{ item.medicine_name }}</div>
-                    <div style="color: var(--text-muted); font-size: 0.9rem;">{{ item.herbs }}</div>
+        {% if cart %}
+            <div class="cart-items">
+                {% for item in cart %} 
+                <div class="cart-item">
+                    <div>
+                        <div class="item-name">{{ item.medicine_name }}</div>
+                        <div style="color: var(--text-muted); font-size: 0.9rem;">{{ item.herbs }}</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="item-price">{{ item.price }}</div>
+                        <span class="remove-btn" onclick="removeFromCart('{{ loop.index0 }}')">
+                            <i class="fas fa-trash"></i>
+                        </span>
+                    </div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="item-price">{{ item.price }}</div>
-                    <span class="remove-btn" onclick="removeFromCart('{{ loop.index0 }}')">
-                        <i class="fas fa-trash"></i>
-                    </span>
-                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-    {% else %}
+            
+            <div class="cart-total">
+                Total: ₹{{ total }}
+            </div>
+
+            <button class="buy-now-btn" onclick="openCheckout()">Buy Now</button>
+        {% else %}
+            <p style="text-align: center; color: var(--text-muted); font-size: 1.2rem;">
+                Your cart is empty. <a href="/marketplace" style="color: var(--gold);">Shop now</a>
+            </p>
         {% endif %}
+        </div>
 
     <div id="checkoutModal" class="modal">
         <div class="modal-content">
