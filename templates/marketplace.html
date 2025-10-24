@@ -131,11 +131,18 @@
             transition: all 0.3s ease;
             margin-top: 20px;
             box-shadow: 0 4px 15px rgba(74,124,44,0.4);
+            width: 100%;
+            font-size: 1rem;
         }
 
         .add-to-cart-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(74,124,44,0.6);
+        }
+
+        .add-to-cart-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
         }
 
         .no-products {
@@ -153,24 +160,32 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-icon">🕉</span>
+                <span class="logo-icon">ॐ</span>
                 <span class="logo-text">AyurVeda</span>
             </div>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/marketplace" class="active">Marketplace</a></li>
                 <li><a href="/ayurvedic-bot">Ayurvedic Bot</a></li>
+                <li>
+                    <a href="/cart">
+                        Cart 
+                        {% if session.cart %}
+                            ({{ session.cart|length }})
+                        {% else %}
+                            (0)
+                        {% endif %}
+                    </a>
+                </li>
                 <li><a href="/about-team">About Team</a></li>
                 <li><a href="/library">Library</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="market-hero">
         <div class="hero-content">
             <h1 class="market-title">Authentic Ayurvedic Marketplace</h1>
@@ -181,7 +196,6 @@
         <div class="hero-pattern"></div>
     </section>
 
-    <!-- Products Section -->
     <section class="products-section">
         <div class="container">
             <h2 class="section-title">Featured Remedies</h2>
@@ -189,13 +203,15 @@
                 <div class="products-grid">
                     {% for medicine in medicines %}
                         <div class="product-card">
-                            <div class="product-icon">🌿</div>
+                            <div class="product-icon">Herb Icon</div>
                             <h3 class="product-name">{{ medicine.medicine_name }}</h3>
                             <p class="product-use">{{ medicine.use }}</p>
                             <p class="product-herbs"><i class="fas fa-leaf"></i> {{ medicine.herbs }}</p>
                             <div class="product-price">{{ medicine.price }}</div>
                             <p class="product-delivery"><i class="fas fa-shipping-fast"></i> {{ medicine.delivery_notes }}</p>
-                            <button class="add-to-cart-btn" onclick="addToCart('{{ medicine.medicine_name }}')">
+                            <button class="add-to-cart-btn" 
+                                    onclick="addToCart('{{ medicine.medicine_name|escapejs }}', '{{ loop.index }}')"
+                                    id="btn-{{ loop.index }}">
                                 <i class="fas fa-shopping-cart"></i> Add to Cart
                             </button>
                         </div>
@@ -210,7 +226,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <h2 class="cta-title">Ready to Nourish Your Body?</h2>
@@ -221,7 +236,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -243,26 +257,46 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 AyurVeda Platform. All rights reserved.</p>
+                <p>© 2025 AyurVeda Platform. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        function addToCart(productName) {
-            // Simple alert for demo; replace with real cart logic
-            alert(`${productName} added to cart! (Demo - Implement real cart here)`);
-        }
+        async function addToCart(medicineName, btnIndex) {
+            const btn = document.getElementById(`btn-${btnIndex}`);
+            if (!btn) return;
 
-        // Smooth scroll for any internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Adding...';
+
+            try {
+                const res = await fetch('/api/add-to-cart', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: medicineName })
                 });
-            });
-        });
+
+                const data = await res.json();
+
+                if (data.message) {
+                    alert(data.message);
+                    const cartLink = document.querySelector('a[href="/cart"]');
+                    if (cartLink) {
+                        const count = data.count || 0;
+                        cartLink.innerHTML = `Cart (${count})`;
+                    }
+                } else {
+                    alert(data.error || 'Failed to add to cart');
+                }
+            } catch (err) {
+                alert('Network error. Please try again.');
+                console.error(err);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
+            }
+        }
     </script>
 
 </body>
