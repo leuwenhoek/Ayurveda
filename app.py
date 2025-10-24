@@ -173,6 +173,11 @@ def jinja_escapejs(value):
 def team():
     return render_template('team.html')
 
+
+@app.route('/library')
+def lib():
+    return render_template('library.html')
+
 if __name__ == '__main__':
     logger.info("AyurVeda App Starting...")
     app.run(host='0.0.0.0', port=5000, debug=True)
