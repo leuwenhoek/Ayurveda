@@ -169,6 +169,10 @@ def chat():
 def jinja_escapejs(value):
     return escape(value)
 
+@app.route('/about-team')
+def team():
+    return render_template('team.html')
+
 if __name__ == '__main__':
     logger.info("AyurVeda App Starting...")
     app.run(host='0.0.0.0', port=5000, debug=True)
