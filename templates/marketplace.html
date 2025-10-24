@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Authentic Ayurvedic Products | AyurVeda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .market-hero {
+            position: relative;
+            background: linear-gradient(135deg, #2d4a1f 0%, #1a2e14 100%);
+            color: var(--cream);
+            padding: 140px 20px 100px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .market-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(212,175,55,0.15), transparent 50%),
+                              radial-gradient(circle at 80% 80%, rgba(74,124,44,0.2), transparent 50%);
+            pointer-events: none;
+        }
+
+        .market-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(212,175,55,0.5);
+            margin-bottom: 20px;
+        }
+
+        .market-subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
+        .products-section {
+            padding: 80px 20px;
+            background-color: var(--secondary-dark);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, var(--card-dark) 0%, var(--secondary-dark) 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--deep-orange));
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 8px 30px rgba(212,175,55,0.3);
+        }
+
+        .product-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(212,175,55,0.3));
+        }
+
+        .product-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .product-use {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .product-herbs {
+            font-style: italic;
+            color: var(--secondary-green);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .product-price {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-delivery {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .add-to-cart-btn {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            color: var(--primary-dark);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(74,124,44,0.4);
+        }
+
+        .add-to-cart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74,124,44,0.6);
+        }
+
+        .no-products {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            padding: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .market-title { font-size: 2.5rem; }
+            .products-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🕉</span>
+                <span class="logo-text">AyurVeda</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/marketplace" class="active">Marketplace</a></li>
+                <li><a href="/ayurvedic-bot">Ayurvedic Bot</a></li>
+                <li><a href="/about-team">About Team</a></li>
+                <li><a href="/library">Library</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="market-hero">
+        <div class="hero-content">
+            <h1 class="market-title">Authentic Ayurvedic Marketplace</h1>
+            <p class="market-subtitle">
+                Discover pure, handcrafted remedies from trusted artisans. Sourced directly from ancient traditions for modern wellness.
+            </p>
+        </div>
+        <div class="hero-pattern"></div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Featured Remedies</h2>
+            {% if medicines %}
+                <div class="products-grid">
+                    {% for medicine in medicines %}
+                        <div class="product-card">
+                            <div class="product-icon">🌿</div>
+                            <h3 class="product-name">{{ medicine.medicine_name }}</h3>
+                            <p class="product-use">{{ medicine.use }}</p>
+                            <p class="product-herbs"><i class="fas fa-leaf"></i> {{ medicine.herbs }}</p>
+                            <div class="product-price">{{ medicine.price }}</div>
+                            <p class="product-delivery"><i class="fas fa-shipping-fast"></i> {{ medicine.delivery_notes }}</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('{{ medicine.medicine_name }}')">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="no-products">
+                    <i class="fas fa-box-open" style="font-size: 4rem; color: var(--text-muted); margin-bottom: 20px;"></i>
+                    <p>No products available yet. Coming soon!</p>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Nourish Your Body?</h2>
+            <p class="cta-text">Explore nature's finest remedies and embrace holistic healing</p>
+            <button class="cta-button-secondary" onclick="window.location.href='/ayurvedic-bot'">
+                Consult Vaidya First
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AyurVeda Platform</h4>
+                    <p>Connecting ancient wisdom with modern wellness</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/marketplace">Marketplace</a></li>
+                        <li><a href="/ayurvedic-bot">Ayurvedic Bot</a></li>
+                        <li><a href="/library">Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>info@ayurveda-platform.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AyurVeda Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(productName) {
+            // Simple alert for demo; replace with real cart logic
+            alert(`${productName} added to cart! (Demo - Implement real cart here)`);
+        }
+
+        // Smooth scroll for any internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
