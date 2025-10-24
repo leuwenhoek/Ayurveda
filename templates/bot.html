@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Bot - Vaidya | AyurVeda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .bot-hero { padding: 140px 20px 100px; background: linear-gradient(135deg, #1a2e14 0%, #2d4a1f 50%, #1f3519 100%); position: relative; overflow: hidden; }
+        .bot-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 50%, rgba(212,175,55,0.15), transparent 50%), radial-gradient(circle at 80% 80%, rgba(74,124,44,0.2), transparent 50%); pointer-events: none; }
+        .bot-title { font-family: 'Cinzel', serif; font-size: 3.2rem; color: var(--gold); text-shadow: 0 0 20px rgba(212,175,55,0.5); }
+        .bot-subtitle { max-width: 700px; margin: 0 auto 30px; color: var(--cream); opacity: 0.95; }
+
+        .chat-container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .chat-box { background: linear-gradient(135deg, var(--card-dark), var(--secondary-dark)); border-radius: 20px; height: 450px; overflow-y: auto; padding: 25px; margin-bottom: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.4); border: 1px solid rgba(212,175,55,0.2); display: flex; flex-direction: column; gap: 15px; }
+        .message { max-width: 75%; padding: 14px 18px; border-radius: 18px; line-height: 1.5; word-wrap: break-word; }
+        .user-message { align-self: flex-end; background: linear-gradient(135deg, var(--gold), var(--earth-brown)); color: var(--primary-dark); border-bottom-right-radius: 4px; box-shadow: 0 2px 10px rgba(212,175,55,0.3); }
+        .bot-message { align-self: flex-start; background: linear-gradient(135deg, var(--secondary-dark), var(--card-dark)); color: var(--text-light); border: 1px solid rgba(212,175,55,0.15); border-bottom-left-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .bot-message::before { content: 'Vaidya'; margin-right: 8px; font-size: 1.1rem; }
+
+        .input-area { display: flex; gap: 12px; align-items: center; }
+        .chat-input { flex: 1; padding: 16px 20px; border: 2px solid var(--card-dark); border-radius: 50px; background: var(--secondary-dark); color: var(--text-light); font-family: 'Lora', serif; font-size: 1rem; outline: none; transition: 0.3s; }
+        .chat-input:focus { border-color: var(--gold); box-shadow: 0 0 15px rgba(212,175,55,0.3); }
+        .send-btn { background: linear-gradient(135deg, var(--primary-green), var(--secondary-green)); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 4px 15px rgba(74,124,44,0.4); }
+        .send-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(74,124,44,0.6); }
+        .send-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+        .typing-indicator { display: flex; align-items: center; gap: 6px; font-style: italic; color: var(--text-muted); font-size: 0.9rem; }
+        .typing-indicator span { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; display: inline-block; animation: bounce 1.4s infinite; }
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes bounce { 0%,80%,100% { transform: scale(0); } 40% { transform: scale(1); } }
+
+        .quick-prompts { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 30px 0; }
+        .prompt-chip { background: rgba(212,175,55,0.15); color: var(--gold); padding: 10px 18px; border-radius: 50px; font-size: 0.95rem; cursor: pointer; transition: 0.3s; border: 1px solid rgba(212,175,55,0.3); }
+        .prompt-chip:hover { background: var(--gold); color: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212,175,55,0.4); }
+
+        .welcome-message { text-align: center; color: var(--text-light); font-size: 1.1rem; opacity: 0.9; margin-bottom: 20px; }
+        .welcome-message strong { color: var(--gold); font-family: 'Cinzel', serif; }
+
+        @media (max-width: 768px) {
+            .bot-title { font-size: 2.5rem; }
+            .chat-box { height: 380px; }
+            .message { max-width: 85%; }
+            .quick-prompts { justify-content: flex-start; overflow-x: auto; padding-bottom: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">Om Symbol</span>
+                <span class="logo-text">AyurVeda</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/marketplace">Marketplace</a></li>
+                <li><a href="/ayurvedic-bot" class="active">Ayurvedic Bot</a></li>
+                <li><a href="/about-team">About Team</a></li>
+                <li><a href="/library">Library</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bot-hero">
+        <div class="hero-content">
+            <h1 class="bot-title">Meet Vaidya</h1>
+            <p class="bot-subtitle">Your AI Ayurvedic Consultant — rooted in ancient wisdom, powered by modern intelligence</p>
+        </div>
+        <div class="hero-pattern"></div>
+    </section>
+
+    <!-- Chat Interface -->
+    <section class="about-section" style="padding-bottom: 40px;">
+        <div class="container">
+            <div class="chat-container">
+                <p class="welcome-message">
+                    Namaste! I am <strong>Vaidya</strong>, your Ayurvedic guide. 
+                    Share your health concerns, dosha, or wellness goals — I’ll offer insights from Ayurveda.
+                </p>
+
+                <div class="chat-box" id="chatBox"></div>
+
+                <div class="quick-prompts">
+                    <div class="prompt-chip" onclick="sendPrompt('What is my dosha?')">What is my dosha?</div>
+                    <div class="prompt-chip" onclick="sendPrompt('Suggest diet for Pitta')">Pitta Diet</div>
+                    <div class="prompt-chip" onclick="sendPrompt('Natural remedy for stress')">Reduce Stress</div>
+                    <div class="prompt-chip" onclick="sendPrompt('Herbs for better sleep')">Improve Sleep</div>
+                    <div class="prompt-chip" onclick="sendPrompt('Morning routine for Vata')">Vata Routine</div>
+                </div>
+
+                <div class="input-area">
+                    <input type="text" class="chat-input" id="userInput" placeholder="Ask about health, herbs, yoga..." autocomplete="off">
+                    <button class="send-btn" id="sendBtn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="bot-features" style="padding: 80px 20px; background: var(--primary-dark);">
+        <div class="container">
+            <h2 class="section-title">Why Trust Vaidya?</h2>
+            <div class="bot-features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="bot-feature-card" style="background: linear-gradient(135deg, var(--card-dark), var(--secondary-dark)); padding: 35px 25px; border-radius: 15px; text-align: center; border: 2px solid transparent; box-shadow: 0 4px 20px rgba(0,0,0,0.4); transition: 0.3s;">
+                    <div class="bot-feature-icon" style="font-size: 3rem; color: var(--sage); filter: drop-shadow(0 0 10px rgba(156,175,136,0.3));">Brain Icon</div>
+                    <h3 class="bot-feature-title" style="color: var(--gold); font-family: 'Cinzel', serif;">Ancient Texts</h3>
+                    <p class="bot-feature-desc" style="color: var(--text-muted);">Trained on Charaka, Sushruta & Ashtanga Hridayam</p>
+                </div>
+                <div class="bot-feature-card" style="background: linear-gradient(135deg, var(--card-dark), var(--secondary-dark)); padding: 35px 25px; border-radius: 15px; text-align: center; border: 2px solid transparent; box-shadow: 0 4px 20px rgba(0,0,0,0.4); transition: 0.3s;">
+                    <div class="bot-feature-icon" style="font-size: 3rem; color: var(--sage); filter: drop-shadow(0 0 10px rgba(156,175,136,0.3));">User Check Icon</div>
+                    <h3 class="bot-feature-title" style="color: var(--gold); font-family: 'Cinzel', serif;">Personalized</h3>
+                    <p class="bot-feature-desc" style="color: var(--text-muted);">Tailored to your prakriti, vikriti & season</p>
+                </div>
+                <div class="bot-feature-card" style="background: linear-gradient(135deg, var(--card-dark), var(--secondary-dark)); padding: 35px 25px; border-radius: 15px; text-align: center; border: 2px solid transparent; box-shadow: 0 4px 20px rgba(0,0,0,0.4); transition: 0.3s;">
+                    <div class="bot-feature-icon" style="font-size: 3rem; color: var(--sage); filter: drop-shadow(0 0 10px rgba(156,175,136,0.3));">Leaf Icon</div>
+                    <h3 class="bot-feature-title" style="color: var(--gold); font-family: 'Cinzel', serif;">Safe Herbs</h3>
+                    <p class="bot-feature-desc" style="color: var(--text-muted);">With dosage, prep & contraindications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Start Your Healing Journey</h2>
+            <p class="cta-text">Ask Vaidya anything — balance begins with a question</p>
+            <button class="cta-button-secondary" onclick="document.getElementById('userInput').focus();">
+                Talk to Vaidya
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AyurVeda Platform</h4>
+                    <p>Ancient wisdom, modern wellness</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/marketplace">Marketplace</ filepath></a></li>
+                        <li><a href="/ayurvedic-bot">Ayurvedic Bot</a></li>
+                        <li><a href="/library">Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>info@ayurveda-platform.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AyurVeda Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const chatBox = document.getElementById('chatBox');
+        const userInput = document.getElementById('userInput');
+        const sendBtn = document.getElementById('sendBtn');
+
+        function addMessage(text, sender) {
+            const msg = document.createElement('div');
+            msg.className = `message ${sender}-message`;
+            msg.innerHTML = text.replace(/\n/g, '<br>');
+            chatBox.appendChild(msg);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function showTyping() {
+            const typing = document.createElement('div');
+            typing.className = 'message bot-message';
+            typing.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span> Vaidya is thinking...</div>';
+            typing.id = 'typing';
+            chatBox.appendChild(typing);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function removeTyping() {
+            const typing = document.getElementById('typing');
+            if (typing) typing.remove();
+        }
+
+        async function sendMessage() {
+            const text = userInput.value.trim();
+            if (!text) return;
+
+            addMessage(text, 'user');
+            userInput.value = '';
+            sendBtn.disabled = true;
+            showTyping();
+
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: text })
+                });
+                const data = await res.json();
+                removeTyping();
+                addMessage(data.reply, 'bot');
+            } catch (err) {
+                removeTyping();
+                addMessage("Sorry, I'm unavailable right now. Please try again later.", 'bot');
+            } finally {
+                sendBtn.disabled = false;
+                userInput.focus();
+            }
+        }
+
+        function sendPrompt(prompt) {
+            userInput.value = prompt;
+            sendMessage();
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', e => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // Auto-greet
+        window.onload = () => {
+            setTimeout(() => {
+                addMessage("Namaste! I'm Vaidya. How may I assist you today?", 'bot');
+            }, 800);
+        };
+    </script>
+</body>
+</html>
