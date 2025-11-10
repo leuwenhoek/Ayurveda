@@ -1,4 +1,4 @@
-# 🌿 AyurVaidya: AI Ayurvedic Consultant
+# 🌿 AyurVeda: AI Ayurvedic Consultant
 
 ## Project Overview
 
